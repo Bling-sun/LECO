@@ -74,11 +74,9 @@ wandb/
 /.runtime/
 .pytest_cache/
 
-# Version trained checkpoints and ONNX policies with the source
-!/neural_tracker/models/v41_directional_recovery/*.pth
-!/neural_tracker/models/v41_directional_recovery/*.onnx
-!/neural_tracker/models/v41_directional_recovery_retrain_clean_20260717/*.pth
-!/neural_tracker/models/v41_directional_recovery_retrain_clean_20260717/*.onnx
+# Publish only the two models used by the default launchers
+!/neural_tracker/models/v41_directional_recovery/policy.onnx
+!/neural_tracker/models/v41_directional_recovery_retrain_clean_20260717/best.pth
 
 # Small recorded fixture used by the documented CPU reproduction check
 !/neural_tracker/examples/repro_data/*.pkl

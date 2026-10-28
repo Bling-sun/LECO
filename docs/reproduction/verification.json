@@ -1,12 +1,12 @@
 {
-  "release_tag": "repro-20261028",
+  "release_tag": "repro-20261028-minimal",
   "verified_date": "2026-10-28",
   "source_isolation": "independent clean source snapshot, no original build/install/venv reused",
   "environment": "new Python 3.12 CPU venv installed from public package indexes; existing Ubuntu 24.04 / ROS 2 Jazzy system installation",
   "system_reinstallation_tested": false,
   "ros_tests": 44,
   "model_tests": 14,
-  "model_files_checked": 19,
+  "model_files_checked": 2,
   "data_frames": {
     "val": 121,
     "train": 121
@@ -128,5 +128,28 @@
         "returncode": 0
       }
     ]
+  },
+  "full_pipeline_release_tag": "repro-20261028",
+  "full_pipeline_model_files_checked": 19,
+  "model_retention": {
+    "kept": [
+      "v41_directional_recovery/policy.onnx",
+      "v41_directional_recovery_retrain_clean_20260717/best.pth"
+    ],
+    "hashes_unchanged_from_full_pipeline_audit": true,
+    "removed_published_model_files": 17,
+    "backend_smoke_check": {
+      "neural": {
+        "started": true,
+        "goal_published": true,
+        "no_process_crash": true
+      },
+      "python": {
+        "started": true,
+        "goal_published": true,
+        "no_process_crash": true
+      }
+    },
+    "checksums_passed": true
   }
 }
