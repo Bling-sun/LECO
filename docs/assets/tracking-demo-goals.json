@@ -1,0 +1,24 @@
+{
+  "format": "neural-tracker-goal-sequence",
+  "version": 1,
+  "topic": "/goal_pose",
+  "map_sha256": "0328f14af900c13412f69a2fe32e5a79c92605b8711dbc0d2421b2d6fe1db51f",
+  "goals": [
+    {
+      "index": 1,
+      "time": 0.0,
+      "frame_id": "world",
+      "position": {
+        "x": -27.125,
+        "y": 22.225,
+        "z": 0.0
+      },
+      "orientation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-10-28T09:31:43.147913+00:00",
+  "map": "src/simulator/map/maze2.json",
+  "policy": "neural_tracker/models/v41_directional_recovery/policy.onnx",
+  "goal": [
+    -27.125,
+    22.225
+  ],
+  "source": "RViz screen capture of live ROS 2 simulation",
+  "capture_fps": 6,
+  "playback_speed": 2,
+  "duration_s": 28.55,
+  "branch_counts": {
+    "stationary_hold": 23,
+    "neural": 265,
+    "traditional": 7
+  },
+  "target_distance_to_goal_m": 0.49774608037413254,
+  "frame_count": 172,
+  "gif_sha256": "df346cae9f3006a3a1ce267108db5dc69c0f36d68fc0065efe6344373792bc05",
+  "map_sha256": "0328f14af900c13412f69a2fe32e5a79c92605b8711dbc0d2421b2d6fe1db51f",
+  "policy_sha256": "4ac97804f31d8ba3c0894db313d1be67cc906804bbf5559364da4ba1a4254c2e",
+  "rendering": "RViz camera crop, resize and title/legend overlay; no trajectory interpolation",
+  "gif_dimensions": [
+    960,
+    776
+  ]
+}

@@ -13,6 +13,14 @@ cd "$TRACKER_ROOT"
 
 默认使用 C++/ONNX v41。在 RViz 发布 `2D Goal Pose` 让目标运动；只看到循环日志不足以证明模型已推理。检查机器人跟随、目标检测、轨迹和 `神经分支` 的非零样本数 / ONNX 耗时。
 
+复现主页 GIF 的地图和目标路线（默认 ONNX 后端）：
+
+```bash
+./start_tracking.sh --stop
+./start_tracking.sh --map-json src/simulator/map/maze2.json \
+  --goals docs/assets/tracking-demo-goals.json
+```
+
 无界面时，加 `--no-rviz`，然后在加载相同 ROS 环境的另一终端发送 maze2 的目标点：
 
 ```bash

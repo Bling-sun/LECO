@@ -6,6 +6,10 @@
 
 从 MPC 专家数据训练跟踪策略，导出 ONNX，并在 ROS 2 仿真中验证闭环跟踪。
 
+![LECO 在 Maze2 中的闭环跟踪演示](docs/assets/tracking-demo.gif)
+
+RViz 实录，2 倍速：红线为跟踪器轨迹，绿线为目标轨迹，蓝色为相机视场。[复现场景](docs/simulation/README.md#交互验证)。
+
 ## 完整流程
 
 | 步骤 | 文档 | 输入 → 输出 |
