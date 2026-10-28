@@ -1,0 +1,84 @@
+bag/
+log/
+logs/
+ros_logs/
+benchmark/results/
+build/
+install/
+.g1_runtime/
+build_g1/
+install_g1/
+log_g1/
+.vscode/settings.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+!third_party/onnxruntime-linux-x64-1.27.0/lib/*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+g1_sim/controllers/
+g1_sim/unitree_mujoco/
+g1_sim/mujoco
+
+# Distribution / packaging
+.eggs/
+*.egg-info/
+*.egg
+dist/
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Training data: only keep merged train.pkl/val.pkl, ignore raw episodes
+neural_tracker/data/expert_ros/
+neural_tracker/data/expert_ros1/
+neural_tracker/data/preview/
+neural_tracker/data/scenarios/
+neural_tracker/data/
+*.pkl
+*.png
+
+# Local office/temp files
+*.docx
+.~*
+
+# Models / logs
+neural_tracker/logs/
+neural_tracker/wandb/
+wandb/
+*.log
+*.pth
+*.onnx
+*.engine
+
+# Generated experiment runs and local colcon bookkeeping
+/experiments/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+/experiments_tradition/
+/symlink_install_manifest.txt
+
+# Local runtime and test caches
+/.runtime/
+.pytest_cache/
+
+# Version trained checkpoints and ONNX policies with the source
+!/neural_tracker/models/v41_directional_recovery/*.pth
+!/neural_tracker/models/v41_directional_recovery/*.onnx
+!/neural_tracker/models/v41_directional_recovery_retrain_clean_20260717/*.pth
+!/neural_tracker/models/v41_directional_recovery_retrain_clean_20260717/*.onnx
+
+# Small recorded fixture used by the documented CPU reproduction check
+!/neural_tracker/examples/repro_data/*.pkl

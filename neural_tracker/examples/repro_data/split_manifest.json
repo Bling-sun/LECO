@@ -1,0 +1,31 @@
+{
+  "seed": 42,
+  "val_ratio": 0.25,
+  "split_unit": "episode",
+  "inputs": [
+    {
+      "path": "blocks/sample_0001.pkl",
+      "sha256": "1ed8a3b68d8902756e45c3738843f15d3a529e93fbf90e049166b7f45a55ae88",
+      "frames": 121
+    },
+    {
+      "path": "blocks/sample_0000.pkl",
+      "sha256": "319783614be4a55cfa7c0fc6a4b3efb2ef97d244d0e01bcb086e9c2de079ac64",
+      "frames": 121
+    }
+  ],
+  "splits": {
+    "val": {
+      "frames": 121,
+      "episodes": [
+        "blocks/sample_0001.pkl"
+      ]
+    },
+    "train": {
+      "frames": 121,
+      "episodes": [
+        "blocks/sample_0000.pkl"
+      ]
+    }
+  }
+}

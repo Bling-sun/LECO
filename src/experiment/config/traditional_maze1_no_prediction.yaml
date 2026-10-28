@@ -1,0 +1,52 @@
+# Experiment-only copy of tracker/config/planner.yaml for no-prediction test.
+# Original Traditional source/config remains unchanged.
+tracking:
+    ros__parameters:
+
+        map:
+            size: 12.0
+            radius: 6.0
+            name: "world"
+            resolution: 0.05
+
+        bezier:
+            m: 3
+            tau: 0.5
+
+        tracker:
+            fov: 87.0
+            range: 4.0
+            radius: 0.15
+            # Comparison variant; original value is 2.5.
+            max_vel: 1.2
+            max_acc: 3.0
+            max_omega: 1.2
+            max_alpha: 2.0
+
+        planner:
+            kappa: 8
+            samples: 3
+            delta_t: 0.1
+            epsilon: 0.25
+            num_angles: 32
+            observation_distance: 2.5
+
+            lambda_a: 1e0
+            lambda_d: 1e0
+            # Original line-of-sight/occlusion weight restored.
+            lambda_o: 1e0
+            # Stronger collision avoidance; original value is 1e9.
+            lambda_c: 3e9
+            lambda_f: 1e5
+            lambda_s: 1e3
+
+        lbfgs:
+            past: 3
+            eps: 1e-6
+            memory: 16
+            delta: 1e-6
+            epsilon: 1e-6
+            max_step: 1e20
+            wolfe: 9e-1
+            armijo: 1e-4
+            iterations: 64

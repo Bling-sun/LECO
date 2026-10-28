@@ -1,0 +1,132 @@
+{
+  "release_tag": "repro-20261028",
+  "verified_date": "2026-10-28",
+  "source_isolation": "independent clean source snapshot, no original build/install/venv reused",
+  "environment": "new Python 3.12 CPU venv installed from public package indexes; existing Ubuntu 24.04 / ROS 2 Jazzy system installation",
+  "system_reinstallation_tested": false,
+  "ros_tests": 44,
+  "model_tests": 14,
+  "model_files_checked": 19,
+  "data_frames": {
+    "val": 121,
+    "train": 121
+  },
+  "quality_report": "Visibility filter\n  dir: $TRACKER_ROOT/.runtime/reproduction_20261028T065310Z_4112684/raw/blocks\n  samples: 2\n  threshold: lost_ratio > 0.20 OR max_consecutive_lost > 20 OR frames < 80 OR path_length < 1.00m OR net_displacement < 0.50m OR stuck_run > 20 frames within 0.20m OR target_tracker_distance < 0.35m\n  bad candidates: 0\n  numbering continuous from 0000: yes\n\nNo bad candidates found.\n",
+  "pipeline": {
+    "date_utc": "20261028T065310Z_4112684",
+    "platform": "Linux-6.14.0-27-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "ros_domain_id": 191,
+    "published": {
+      "valid": true,
+      "control_samples": 29,
+      "neural_cycles": 28,
+      "trial_statuses": [
+        "success"
+      ]
+    },
+    "new_model": {
+      "valid": true,
+      "control_samples": 29,
+      "neural_cycles": 28,
+      "trial_statuses": [
+        "success"
+      ]
+    },
+    "status": "passed",
+    "steps": [
+      {
+        "step": "model_checksums",
+        "returncode": 0
+      },
+      {
+        "step": "fixture_checksums",
+        "returncode": 0
+      },
+      {
+        "step": "ros_tests",
+        "returncode": 0
+      },
+      {
+        "step": "ros_test_results",
+        "returncode": 0
+      },
+      {
+        "step": "model_tests",
+        "returncode": 0
+      },
+      {
+        "step": "collect",
+        "returncode": 0
+      },
+      {
+        "step": "quality",
+        "returncode": 0
+      },
+      {
+        "step": "merge",
+        "returncode": 0
+      },
+      {
+        "step": "train",
+        "returncode": 0
+      },
+      {
+        "step": "evaluate",
+        "returncode": 0
+      },
+      {
+        "step": "export",
+        "returncode": 0
+      },
+      {
+        "step": "random_route",
+        "returncode": 0
+      },
+      {
+        "step": "start_neural",
+        "returncode": 0
+      },
+      {
+        "step": "goal_neural",
+        "returncode": 0
+      },
+      {
+        "step": "stop_neural",
+        "returncode": 0
+      },
+      {
+        "step": "start_traditional",
+        "returncode": 0
+      },
+      {
+        "step": "goal_traditional",
+        "returncode": 0
+      },
+      {
+        "step": "stop_traditional",
+        "returncode": 0
+      },
+      {
+        "step": "start_python",
+        "returncode": 0
+      },
+      {
+        "step": "goal_python",
+        "returncode": 0
+      },
+      {
+        "step": "stop_python",
+        "returncode": 0
+      },
+      {
+        "step": "experiment_published",
+        "returncode": 0
+      },
+      {
+        "step": "experiment_new_model",
+        "returncode": 0
+      }
+    ]
+  }
+}

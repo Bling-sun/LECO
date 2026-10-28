@@ -1,0 +1,85 @@
+simulation:
+    ros__parameters:
+
+        hz: 20.0
+
+        # MID-360 planar scan used by the rolling local tracker map. The real
+        # device has 360-degree horizontal FoV; range is 40 m at 10% target
+        # reflectivity. Simulation stops rays earlier at map boundaries.
+        lidar:
+            range: 40.0
+            angular_resolution: 1.0
+
+        map:
+            # Optional Map Studio neural-tracker-map JSON. Empty uses the
+            # procedural generator configured below.
+            file: ""
+            seed: 2
+            width: 50.0
+            height: 50.0
+            obstacles: 30
+            resolution: 0.05
+            style: "corridors" # plus forest, forest_dense, rocky, offroad_mixed; see src/simulator/README.md
+            # blocks, sparse, dense, pillars, corridors, rooms, maze, random, mixed, mixed_shapes, polygons_s, l_shapes, corner_maze, loop_maze
+            name: "world"
+
+        # Parallel 3D/sensor outputs. The tracker builds its rolling local map
+        # from /tracker/scan; /map remains simulator truth/visualization only.
+        map3d:
+            min_z: 0.05
+            max_z: 1.50
+            vertical_resolution: 0.10
+            min_obstacle_height: 0.80
+            max_obstacle_height: 1.50
+
+        # Disabled in the original launch path. The dedicated
+        # start_tracking.sh --temporary-obstacles option enables automatic
+        # persistent generation and keeps optional RViz manual placement.
+        temporary_obstacle:
+            enabled: false
+            auto_add: false
+            # -1: a fresh random seed for each process; >=0: reproducible sequence
+            seed: -1
+            interval: 5.0
+            min_size: 0.60
+            max_size: 1.20
+            height: 4.0
+            placement_jitter: 1.50
+            # Absolute lower bound for obstacle-to-obstacle/map-edge gaps.
+            # Runtime also enforces the larger of both robot diameters and
+            # twice target.planning_clearance (0.60 m with defaults).
+            minimum_spacing: 0.50
+            linear_motion_threshold: 0.02
+            # Rotation in place does not count as motion. Pause after this
+            # many seconds without effective translation.
+            stuck_timeout: 3.0
+
+        target:
+            x: -7.0
+            y: 0.0
+            yaw: 0.0
+            radius: 0.17
+            name: "target"
+            
+            # For planning
+            max_vel: 1.7
+            max_acc: 1.0
+            # Hard collision clearance, and the preferred center-to-wall
+            # distance used by A*, path pruning and trajectory smoothing.
+            planning_clearance: 0.3
+            preferred_clearance: 0.8
+            wall_cost_weight: 4.0
+            random_motion_enabled: false
+
+        tracker:
+            x: -9.5
+            y: 0.0
+            yaw: 0.0
+            fps: 10.0
+            # Intel RealSense D435i depth FOV, HD 16:9: H 87 deg, V 58 deg.
+            fov: 87.0
+            vertical_fov: 58.0
+            camera_height: 0.61
+            range: 4.0
+            radius: 0.15
+            name: "tracker"

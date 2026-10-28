@@ -1,0 +1,57 @@
+# Dedicated 20 m collection map matching Config.MAP_SIZE; keep separate from demo settings.
+simulation:
+  ros__parameters:
+    hz: 20.0
+    lidar:
+      range: 40.0
+      angular_resolution: 1.0
+    map:
+      file: ''
+      seed: 100
+      width: 20.0
+      height: 20.0
+      obstacles: 30
+      resolution: 0.05
+      style: corridors
+      name: world
+    map3d:
+      min_z: 0.05
+      max_z: 1.5
+      vertical_resolution: 0.1
+      min_obstacle_height: 0.8
+      max_obstacle_height: 1.5
+    temporary_obstacle:
+      enabled: false
+      auto_add: false
+      seed: -1
+      interval: 5.0
+      min_size: 0.6
+      max_size: 1.2
+      height: 4.0
+      placement_jitter: 1.5
+      minimum_spacing: 0.5
+      linear_motion_threshold: 0.02
+      stuck_timeout: 3.0
+    target:
+      x: -2.0
+      y: 0.0
+      yaw: 0.0
+      radius: 0.17
+      name: target
+      max_vel: 1.7
+      max_acc: 1.0
+      planning_clearance: 0.3
+      preferred_clearance: 0.8
+      wall_cost_weight: 4.0
+      random_motion_enabled: false
+    tracker:
+      x: -4.5
+      y: 0.0
+      yaw: 0.0
+      fps: 10.0
+      fov: 87.0
+      vertical_fov: 58.0
+      camera_height: 0.61
+      range: 4.0
+      radius: 0.15
+      name: tracker

@@ -1,0 +1,17 @@
+experiment:
+  map_file: src/simulator/map/maze2.json
+  policy_file: neural_tracker/models/v41_directional_recovery/policy.onnx
+  algorithm_label: neural_tracker_v41
+  max_tracking_speed_mps: 2.5
+  route_timeout_s: 900.0
+  lost_timeout_s: 3.0
+  min_tracking_distance_m: 0.5
+  max_tracking_distance_m: 4.0
+  distance_timeout_s: 2.0
+  final_goal_tolerance_m: 2.0
+  waypoint_advance_radius_m: 2.0
+  waypoint_timeout_s: 120.0
+  sensor_fov_deg: 87.0
+  sensor_range_m: 4.0
+  pose_max_age_s: 0.25
+  max_fov_missing_rate: 0.01
