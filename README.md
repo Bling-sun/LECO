@@ -8,7 +8,7 @@
 
 ![LECO 在 Maze2 中的闭环跟踪演示](docs/assets/tracking-demo.gif)
 
-RViz 实录，2 倍速：红线为跟踪器轨迹，绿线为目标轨迹，蓝色为相机视场。[复现场景](docs/simulation/README.md#交互验证)。
+57 秒 RViz 实录，以 4 倍速播放（总时长约 14 秒）：红线为跟踪器轨迹，绿线为目标轨迹，蓝色为相机视场。[复现场景](docs/simulation/README.md#交互验证)。
 
 ## 完整流程
 

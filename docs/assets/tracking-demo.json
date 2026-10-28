@@ -1,28 +1,53 @@
 {
-  "recorded_at_utc": "2026-10-28T09:31:43.147913+00:00",
+  "recorded_at_utc": "2026-10-28T10:10:31.334165+00:00",
   "map": "src/simulator/map/maze2.json",
   "policy": "neural_tracker/models/v41_directional_recovery/policy.onnx",
-  "goal": [
-    -27.125,
-    22.225
+  "goals": [
+    [
+      -27.125,
+      22.225
+    ],
+    [
+      -1.075,
+      37.025
+    ]
+  ],
+  "route_events": [
+    {
+      "index": 1,
+      "time_s": 1.001,
+      "position": [
+        -27.125,
+        22.225
+      ]
+    },
+    {
+      "index": 2,
+      "time_s": 28.149,
+      "position": [
+        -1.075,
+        37.025
+      ]
+    }
   ],
   "source": "RViz screen capture of live ROS 2 simulation",
   "capture_fps": 6,
-  "playback_speed": 2,
-  "duration_s": 28.55,
+  "playback_speed": 4,
+  "duration_s": 57.12,
+  "gif_playback_duration_s": 14.28,
   "branch_counts": {
-    "stationary_hold": 23,
-    "neural": 265,
-    "traditional": 7
+    "stationary_hold": 13,
+    "neural": 560
   },
-  "target_distance_to_goal_m": 0.49774608037413254,
-  "frame_count": 172,
-  "gif_sha256": "df346cae9f3006a3a1ce267108db5dc69c0f36d68fc0065efe6344373792bc05",
+  "frame_count": 343,
+  "gif_sha256": "3fdfb1d494377a2a15f821bfaec3e27641ab23143c59cfd1169e1fcfc6e6e025",
   "map_sha256": "0328f14af900c13412f69a2fe32e5a79c92605b8711dbc0d2421b2d6fe1db51f",
   "policy_sha256": "4ac97804f31d8ba3c0894db313d1be67cc906804bbf5559364da4ba1a4254c2e",
   "rendering": "RViz camera crop, resize and title/legend overlay; no trajectory interpolation",
   "gif_dimensions": [
     960,
     776
-  ]
+  ],
+  "tracker_path_length_m": 61.48,
+  "target_path_length_m": 65.07
 }
